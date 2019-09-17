@@ -104,6 +104,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\comicBookRepository.cs" />
     <Compile Include="Controllers\ComicBooksController.cs" />
     <Compile Include="Data\ComicBookRepo.cs" />
     <Compile Include="Global.asax.cs">
