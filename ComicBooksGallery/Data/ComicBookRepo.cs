@@ -4,9 +4,9 @@ using System.Linq;
 using System.Web;
 using ComicBookGallery.Models;
 
-namespace ComicBookGallery.Data
+namespace ComicBooksGallery.Data
 {
-    public class ComicBookRepository
+    public class ComicBookRepo
     {
         private static ComicBook[] _comicBooks = new ComicBook[]
         {
@@ -22,9 +22,10 @@ namespace ComicBookGallery.Data
                     new Artist() { Name = "Victor Olazaba", Role = "Inks" },
                     new Artist() { Name = "Edgar Delgado", Role = "Colors" },
                     new Artist() { Name = "Chris Eliopoulos", Role = "Letters" },
-                }
+                },
+                Favorite = false
             },
-                        new ComicBook()
+            new ComicBook()
             {
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 657,
@@ -61,7 +62,7 @@ namespace ComicBookGallery.Data
 
             foreach (var comicBook in _comicBooks)
             {
-                if (comicBook.Id == id)
+                if(comicBook.Id == id)
                 {
                     comicBookToReturn = comicBook;
 
